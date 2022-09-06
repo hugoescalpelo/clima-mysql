@@ -11,6 +11,9 @@
 5. Crear una nueva tabla que contenga los campos deseados
     - id, fecha, nombre, temperatura, humedad
     - `create table clima (id INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, nombre CHAR (248) NOT NULL, temperatura FLOAT (4,2), humedad INT (3));`
+6. Crear un nuevo usuario para ser usado con NodeRed
+    - `CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';`
+    - `CREATE USER 'hugohugo'@'localhost' IDENTIFIED BY '1234';`
 
 
 
