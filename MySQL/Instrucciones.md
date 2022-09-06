@@ -22,3 +22,8 @@
 - Puedes consultar todas las bases de datos con el comando `show databases;`
 - Puedes consultar las tablas en el interior de una base de datos selecccionada con el comando `show tables;`
 - Puedes consultar la forma de la tabla con el comando `describe clima;`
+- Para agregar información a la base de datos con NodeRed se requiere poner en un nodo Function la siguiente información
+
+`msg.topic = "INSERT INTO clima ('nombre', 'temperatura', 'humedad') VALUES ('Hugo'," + global.get ("tempAPI")+ "," + global.get ("humAPI") + ");";`
+
+`return msg;`
