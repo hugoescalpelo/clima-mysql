@@ -14,6 +14,7 @@
 6. Crear un nuevo usuario para ser usado con NodeRed
     - `CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';`
     - `CREATE USER 'hugohugo'@'localhost' IDENTIFIED BY '1234';`
+    - `GRANT ALL PRIVILEGES ON *.* TO 'hugohugo'@'localhost';`
 
 
 
@@ -24,6 +25,8 @@
 - Puedes consultar la forma de la tabla con el comando `describe clima;`
 - Para agregar información a la base de datos con NodeRed se requiere poner en un nodo Function la siguiente información
 
-`msg.topic = "INSERT INTO clima ('nombre', 'temperatura', 'humedad') VALUES ('Hugo'," + global.get ("tempAPI")+ "," + global.get ("humAPI") + ");";`
+`msg.topic = "INSERT INTO clima (`nombre`,`temperatura`,`humedad`) VALUES ('Hugo'," + global.get ("tempAPI")+ "," + global.get ("humAPI") + ");";`
 
 `return msg;`
+
+- Puedes consultar todos los datos de una tabla con el siguiente comando `SELECT * FROM clima;`
